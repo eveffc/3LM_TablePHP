@@ -16,7 +16,7 @@
 
         echo '<div class="actions_buttons">';
         echo '<button class="edit_button" data-id="' . $row['id'] . '" style="background-color: #13a538;">Editar</button>';
-        echo '<button class="edit_button" data-id="' . $row['id'] . '" style="background-color: #ce8414;">Excluir</button>';
+        echo '<a href="http://localhost/Projetos/3LM_TablePHP/src/PHP/Delete_Office.php?id=' . $row['id'] . '" class="edit_button" style="background-color: #ce8414;">Excluir</a>';
         echo '</div>';
         echo '</div>';
     }

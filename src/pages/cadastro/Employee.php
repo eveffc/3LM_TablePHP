@@ -30,7 +30,7 @@
         }
         ?>
        
-        <form action="../../PHP/UserDB.php" method="post">
+        <form action="../../PHP/EmployeeDB.php" method="post">
             <div class="form">
                 <input class="input space" type="text" id="nome" name="nome" placeholder="Nome" required>
                 <input class="input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
