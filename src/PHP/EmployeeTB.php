@@ -1,17 +1,20 @@
 <?php
     include_once("conexaoDeDados.php");
 
-    $query = "SELECT * FROM cargos ORDER BY cargo ASC";
+    /*união da tabela funcionários com a coluna cargos para ajustar o problema que estava emfrentando
+    do cargo ser inserido na tabela como id ao invés do nome do cargo*/
+    $query = "SELECT f.*, c.cargo AS cargo FROM funcionarios f
+    LEFT JOIN cargos c ON f.cargo = c.id ORDER BY f.nome ASC";
     $result = mysqli_query($conn, $query);
 
-    $tableCargo = '<table>';
     
     while ($row =mysqli_fetch_assoc($result)) {
         echo '<div class="card">';
 
         echo '<div class="info">';
-        echo '<div class="title">' . $row['cargo'] . '</div>';
-        echo '<div class="title">' . $row['descricao'] . '</div>';
+        echo '<div class="title">' . $row['nome'] . '</div>';
+        echo '<div class="title">' . $row['sobrenome'] . '</div>';
+        echo '<div class="text">' . $row['cargo'] . '</div>';
         echo '</div>';
 
         echo '<div class="actions_buttons">';
