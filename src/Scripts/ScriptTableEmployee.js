@@ -1,4 +1,3 @@
-
 fetch("/projetos/3LM_TablePHP/src/PHP/EmployeeTB.php")
 
     .then(response => response.text())

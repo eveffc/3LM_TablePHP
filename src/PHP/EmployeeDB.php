@@ -8,11 +8,6 @@
     $nascimento = filter_input(INPUT_POST, 'nascimento');
     $salario = filter_input(INPUT_POST, 'salario');
 
-    // teste
-    // echo "Nome: $nome $sobrenome <br>";
-    // echo "Cargo: $cargo";
-
-
     // Verificar duplicidade
     $verificar_usuario = "SELECT id FROM funcionarios WHERE nome = '$nome' AND sobrenome = '$sobrenome' AND nascimento = '$nascimento'";
     $resultado = mysqli_query($conn, $verificar_usuario);
