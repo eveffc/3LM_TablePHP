@@ -12,10 +12,9 @@
         echo '<div class="card">';
 
         echo '<div class="info">';
-        echo '<div class="name">';
-        echo '<div class="title">' . $row['nome'] . '</div>';
-        echo '<div class="title">' . $row['sobrenome'] . '</div>';
-        echo '</div>';
+        echo '<a href="http://localhost/Projetos/3LM_TablePHP/src/pages/cadastro/Employee_view.php?id=' . $row['id'] . '"class="title">';
+        echo '<div class="title">' . $row['nome'] ." ". $row['sobrenome'] . '</div>';
+        echo '</a>';
         echo '<div class="text" <label>Cargo:  </label>'. $row['cargo'] . '</div>';
         echo '</div>';
 

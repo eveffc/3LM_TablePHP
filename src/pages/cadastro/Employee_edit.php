@@ -39,13 +39,6 @@
         <img class="logo" src="../../../assets/img/Logo.svg">
         </header>
 
-        <?php
-        if(isset($_SESSION['msg'])){
-            echo $_SESSION['msg'];
-            unset($_SESSION['msg']);
-        }
-        ?>
-       
         <form action="../../PHP/Save_Employee.php" method="post">
         <input type="hidden" name="id" value="<?php echo isset($id) ? $id : ''; ?>">
             <div class="form">

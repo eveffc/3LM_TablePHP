@@ -10,7 +10,8 @@
 
         <script src="../../Scripts/ScriptPage.js"></script>
         <script src="../../Scripts/ScriptTableEmployee.js"></script>
-        <script src=""></script>
+        <script src="../../Scripts/ScriptRelatorios.js"></script>
+        <script src="../../Scripts/ScriptModal.js"></script>
 
         <link href="../../../assets/img/Icon.svg" type="icon" rel="icon">
         <title>Funcionário</title>
@@ -25,7 +26,18 @@
 
         <main>
             <div class="table">
-                <input class="search" type="text" id="searchInput" placeholder="Pesquisar"> <!--Editar mais pra frente-->
+                <div class="bar">
+                    <input class="search" type="text" id="searchInput" placeholder="Pesquisar"> <!--Editar mais pra frente-->
+                   
+                    <div class="relatorio">
+                        <button class="gerarDoc" id="gerarRelatorioPDF">
+                            <img src="../../../assets/img/Pdf.svg">
+                        </button>
+                        <button class="gerarDoc" id="gerarRelatorioXlsx">
+                            <img src="../../../assets/img/Xlsx.svg">
+                        </button>
+                    </div>
+                </div>
                 <div class="table-container">
                     <div id="TabelaEmployee"></div>
                 </div>
@@ -41,5 +53,6 @@
                 </button>
             </div>
         </main>
+        </div>
     </body>
 </html>
